@@ -32,5 +32,20 @@ class ProductionMenu
 
 production_menu = new ProductionMenu()
 
-$('.carousel').carousel
-  interval: 25000
+$('#top-carousel-inner').carouFredSel
+  items: 1
+  circular: true
+  infinite: true
+  auto: true
+  prev:
+    button: "#top-carousel-inner_prev"
+    key: "left"
+    duration: 750
+  next:
+    button: "#top-carousel-inner_next"
+    key: "right"
+    duration: 750
+  pagination:
+    container: "#top-carousel-inner_pag"
+    keys: true
+    duration: 3000

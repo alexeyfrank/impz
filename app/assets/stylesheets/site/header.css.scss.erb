@@ -1,0 +1,157 @@
+@import 'mixins';
+
+.header {
+    width: 100%;
+    height: 273px;
+    background: url(<%= asset_path('bg.jpg') %>) 0 0 repeat-x;
+
+    .header-inner {
+        background: url(<%= asset_path('bg-left.jpg') %>) 0 0 no-repeat;
+        height: 100%;
+        width: 100%;
+
+        .brand {
+            position: absolute;
+            top: 110px;
+            left: 35px;
+            display: block;
+            width: 326px;
+            height: 71px;
+            background: url(<%= asset_path('logo-big.png') %>) 0 0 no-repeat;
+        }
+
+        .fast-consult {
+            position: absolute;
+            top: 200px;
+            left: 155px;
+            width: 208px;
+            height: 62px;
+            color: #ffffff;
+            font-size: 19px;
+            @include text-shadow(-2px, 2px);
+
+            .phone {
+                font-size: 27px;
+
+            }
+        }
+
+        .navbar {
+            margin-left: 500px;
+            margin-bottom: 0;
+            .navbar-inner {
+                height: 70px;
+                background: 0;
+                border: 0;
+                box-shadow: none;
+                -webkit-box-shadow: none;
+
+                ul {
+                    padding-top: 30px;
+                    li {
+                        a {
+                            font-size: 16px;
+                            line-height: 30px;
+                            color: #0f7cc1;
+                            text-decoration: underline;
+                            margin: 0 20px;
+                            padding: 0;
+                            padding-right: 30px;
+                            border-right: 1px solid gray;
+                        }
+
+                        &:last-child {
+                            a {
+                                border-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .top-carousel {
+            margin-top: 2px;
+            position: relative;
+
+            .inner-carousel {
+                margin-left: 50px;
+
+                .item {
+                    padding-left: 15px;
+                    position: relative;
+                    display: block;
+                    float: left;
+                    width: 650px;
+                    height: 200px;
+
+                    .item-header {
+                        width: 300px;
+                        .title {
+                            margin-top: 35px;
+                            color: #ffffff;
+                            line-height: 35px;
+                            font-size: 30px;
+                            @include text-shadow(-2px, 2px);
+                        }
+
+                        .subtitle {
+                            color: #a8d0f1;
+                            margin-top: 5px;
+                            line-height: 20px;
+                            font-size: 18px;
+                        }
+                    }
+
+                    img {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 350px;
+                    }
+                }
+            }
+
+            a.prev, a.next {
+                width: 36px;
+                height: 46px;
+                display: block;
+                position: absolute;
+                top: 85px;
+            }
+            a.prev { background: url(<%= asset_path('carousel-arrow-left.png') %>) }
+            a.next { background: url(<%= asset_path('carousel-arrow-right.png') %>); right: 0 }
+            a.prev.disabled, a.next.disabled { cursor: default; }
+
+            .pagination {
+                position: absolute;
+                bottom: -10px;
+                left: 350px;
+                text-align: center;
+
+                a {
+                    background: url(<%= asset_path('circle.png') %>);
+                    /*background: url(../images/miscellaneous_sprite.png) 0 -300px no-repeat transparent;*/
+                    width: 14px;
+                    height: 12px;
+                    margin: 0 5px 0 0;
+                    display: inline-block;
+
+                    &.selected {
+                        background: url(<%= asset_path('circle-selected.png') %>);
+                        cursor: default;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+            .clearfix {
+                float: none;
+                clear: both;
+            }
+        }
+    }
+
+}
