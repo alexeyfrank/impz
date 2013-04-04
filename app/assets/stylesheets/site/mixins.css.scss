@@ -1,0 +1,4 @@
+@mixin text-shadow($offset, $blur) {
+  text-shadow: $offset $offset $blur #050505;
+  filter: dropshadow(color=#050505, offx=$offset, offy=$offset);
+}

@@ -4,7 +4,7 @@
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    %title= content_for?(:title) ? yield(:title) : "МДМ Стандарт"
+    %title= content_for?(:title) ? yield(:title) : "ИМПЗ"
     = csrf_meta_tags
 
     /[if lt IE 9]
@@ -15,22 +15,44 @@
     %link(href="favicon.ico" rel="shortcut icon")
 
   %body
-    = render 'layouts/shared/web/navbar'
-    = render 'layouts/shared/web/production'
-    = render 'layouts/shared/web/companies'
-
-    .container.content
+    = render 'layouts/shared/web/header'
+    .container.top-sections
       .row
-        - if @page && @page.slug.eql?('main')
-          .span8
-            = bootstrap_flash
-            = yield
-          .span4
-            = render 'layouts/shared/web/hot'
-        - else
-          .span12
-            = bootstrap_flash
-            = yield
+        .span3
+          = image_tag asset_path('deyatelnost-4.png')
+          = link_to 'Выезд специалиста', '#'
+          %p Краткое описание раздела, описывающее его содержание
+        .span3
+          = image_tag asset_path('deyatelnost-4.png')
+          = link_to 'Выезд специалиста', '#'
+          %p Краткое описание раздела, описывающее его содержание
+        .span3
+          = image_tag asset_path('deyatelnost-4.png')
+          = link_to 'Выезд специалиста', '#'
+          %p Краткое описание раздела, описывающее его содержание
+        .span3
+          = image_tag asset_path('deyatelnost-4.png')
+          = link_to 'Выезд специалиста', '#'
+          %p Краткое описание раздела, описывающее его содержание
+
+    #content.container.content
+      .row
+        .span12
+          %h2 О нас
+          %p
+            «Инзенский завод металлопроката» работает на рынке более 10-ти лет и уже известен потребителю как надежный и опытный производитель металлопроката. Имея в своей базе собственные производственные площади, а так же высококачественное оборудование лучших производителей, своевременно реализуются основные цели компании: выпуск качественной продукции в связи требованиями потребителей, соблюдение сроков изготовления продукции, повышение благосостояния работников компании. В целях повышения квалификации сотрудников производится постоянное обучение персонала.
+          .row
+            .span6
+              %ul
+                %li Вся продукция изготавливается по ГОСТу
+                %li Индивидуальный подход к каждому заказу
+                %li Уникальные современные технологии
+            .span6
+              %ul
+                %li Большой выбор продукции и доборных элементов
+                %li Вызов специалсита для проведения замеров
+          = bootstrap_flash
+          = yield
 
     = render 'layouts/shared/web/footer'
     = render 'layouts/shared/web/footer_company'
