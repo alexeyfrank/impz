@@ -3,8 +3,11 @@ ru:
   activerecord:
     errors:
       models:
-        manager:
+        user:
           attributes:
-            email:
-              email: ''
-  error: ''
+            state:
+              invalid_transition: ''
+        page:
+          attributes:
+            state:
+              invalid_transition: ''

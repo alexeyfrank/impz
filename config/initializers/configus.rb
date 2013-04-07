@@ -7,7 +7,8 @@ Configus.build Rails.env do
         about: 'О компании',
         contacts: 'Контакты',
         price: 'Прайс-лист',
-        partners: 'Портфолио партнеров',
+        products: 'Выпускаемая продукция',
+        cooperation_terms: 'Условия сотрудничества',
     }
     pages pages_hash.to_a
   end

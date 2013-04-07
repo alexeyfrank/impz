@@ -6,18 +6,18 @@
     .fast-consult
       %p Быстрая консультация
       %p
-        8 (8422)
-        %span.phone 11 22 33
+        8 (84241)
+        %span.phone 2-46-83
 
     .navbar
       .navbar-inner
         .container
           %ul.nav.nav-collapse
-            %li= link_to "О заводе", page_path(:about)
+            -#%li= link_to "О заводе", page_path(:about)
             %li= link_to "Продукция", page_path(:products)
-            %li= link_to "Преимущества", page_path(:benefits)
-            %li= link_to "Доставка и нарезка", page_path(:shipping)
-            %li= link_to "Контакты", contacts_path
+            %li= link_to "Прайс-лист", page_path(:price)
+            %li= link_to "Условия сотрудничества", page_path(:cooperation_terms)
+            %li= link_to "Контакты", page_path(:contacts)
 
     .container
       .span10.offset2
@@ -28,21 +28,21 @@
                 .title Металлический профиль
                 .subtitle Высококачественный профиль различных видов
               %img(src="#{asset_path('c-item-1.png')}")
-            .item
-              .item-header
-                .title Металлический профиль
-                .subtitle Высококачественный профиль различных видов
-              %img(src="#{asset_path('c-item-1.png')}")
-            .item
-              .item-header
-                .title Металлический профиль
-                .subtitle Высококачественный профиль различных видов
-              %img(src="#{asset_path('c-item-1.png')}")
-            .item
-              .item-header
-                .title Металлический профиль
-                .subtitle Высококачественный профиль различных видов
-              %img(src="#{asset_path('c-item-1.png')}")
+            -#.item
+            -#  .item-header
+            -#    .title Металлический профиль
+            -#    .subtitle Высококачественный профиль различных видов
+            -#  %img(src="#{asset_path('c-item-1.png')}")
+            -#.item
+            -#  .item-header
+            -#    .title Металлический профиль
+            -#    .subtitle Высококачественный профиль различных видов
+            -#  %img(src="#{asset_path('c-item-1.png')}")
+            -#.item
+            -#  .item-header
+            -#    .title Металлический профиль
+            -#    .subtitle Высококачественный профиль различных видов
+            -#  %img(src="#{asset_path('c-item-1.png')}")
           .clearfix
           %a#top-carousel-inner_prev.prev(href="#")
           %a#top-carousel-inner_next.next(href="#")
