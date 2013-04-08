@@ -20,15 +20,15 @@
       .row
         .span3
           = image_tag asset_path('deyatelnost-1.png')
-          = link_to 'Современное производство', '#'
+          = link_to 'Современное производство', page_path(:about, anchor: :manufacture)
           -#%p Краткое описание раздела, описывающее его содержание
         .span3
           = image_tag asset_path('deyatelnost-2.png')
-          = link_to 'Преимущества продукции', '#'
+          = link_to 'Преимущества продукции', page_path(:about, anchor: :benefits)
           -#%p Краткое описание раздела, описывающее его содержание
         .span3
           = image_tag asset_path('deyatelnost-3.png')
-          = link_to 'Что мы выпускаем', '#'
+          = link_to 'Что мы выпускаем', page_path(:products)
           -#%p Краткое описание раздела, описывающее его содержание
         .span3
           = image_tag asset_path('deyatelnost-4.png')
