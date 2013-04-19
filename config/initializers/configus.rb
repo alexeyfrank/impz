@@ -9,7 +9,8 @@ Configus.build Rails.env do
         price: 'Прайс-лист',
         products: 'Выпускаемая продукция',
         cooperation_terms: 'Условия сотрудничества',
-        call_specialist: "Выезд специалиста"
+        call_specialist: "Выезд специалиста",
+        benefits: 'Преимущества продукции'
     }
     pages pages_hash.to_a
   end
