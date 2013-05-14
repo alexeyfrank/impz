@@ -4,7 +4,7 @@ set :default_stage, "staging"
 require 'capistrano/ext/multistage'
 #require 'airbrake/capistrano'
 
-set :application, "mdmstandart"
+set :application, "impz73"
 set :rvm_type, :system
 
 set :scm, :git
