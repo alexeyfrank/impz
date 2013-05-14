@@ -1,6 +1,6 @@
 set :rails_env, "production"
 set :branch, 'master'
-set :user, 'mdmstandart_production'
+set :user, 'impz73_production'
 set :keep_releases, 5
 
 role :web, '62.76.184.163'

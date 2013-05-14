@@ -8,7 +8,7 @@ set :application, "mdmstandart"
 set :rvm_type, :system
 
 set :scm, :git
-set :repository,  "git://github.com/alexeyfrank/mdmstandart.git"
+set :repository,  "git://github.com/alexeyfrank/impz.git"
 
 set :use_sudo, false
 set :ssh_options, forward_agent: true
